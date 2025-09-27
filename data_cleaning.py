@@ -56,7 +56,7 @@ class StockDataCleaner:
         print(f"✅ Missing values after cleaning: {missing_after}")
         print(f" Final data shape: {df.shape}")
         
-        self.processed_data = df  # Changed from self.clean_data
+        self.processed_data = df  
         return df
     
     def add_basic_features(self):
@@ -64,7 +64,7 @@ class StockDataCleaner:
         print("\n ADDING TECHNICAL INDICATORS")
         print("=" * 40)
         
-        df = self.processed_data.copy()  # Changed from self.clean_data
+        df = self.processed_data.copy() 
         
         # Moving averages
         print(" Adding moving averages...")
