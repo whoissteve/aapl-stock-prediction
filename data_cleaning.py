@@ -18,7 +18,7 @@ class StockDataCleaner:
         
     def clean_data(self):
         """Clean the data - handle missing values and outliers"""
-        print("\n🧹 CLEANING DATA")
+        print("\n CLEANING DATA")
         print("=" * 40)
         
         # Start with a copy to make a date column
@@ -29,7 +29,7 @@ class StockDataCleaner:
         
         # Check for missing values
         missing_before = df.isnull().sum().sum()
-        print(f"🔍 Missing values before cleaning: {missing_before}")
+        print(f" Missing values before cleaning: {missing_before}")
         
         # Fill missing values
         df.fillna(method='ffill', inplace=True) 
@@ -61,7 +61,7 @@ class StockDataCleaner:
     
     def add_basic_features(self):
         """Add simple technical indicators"""
-        print("\n🔧 ADDING TECHNICAL INDICATORS")
+        print("\n ADDING TECHNICAL INDICATORS")
         print("=" * 40)
         
         df = self.processed_data.copy()  # Changed from self.clean_data
